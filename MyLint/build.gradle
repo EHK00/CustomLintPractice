@@ -1,0 +1,29 @@
+apply plugin: 'kotlin'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+
+dependencies {
+    def kotlinVersion = "1.3.50"
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    def lintVersion = "26.5.2"
+    compileOnly "com.android.tools.lint:lint-api:$lintVersion"
+    compileOnly "com.android.tools.lint:lint-checks:$lintVersion"
+    testImplementation "com.android.tools.lint:lint-tests:$lintVersion"
+}
+
+jar {
+    manifest {
+        attributes("Lint-registry": "com.ekh.mvllint.lint.IssueRegistry")
+    }
+}

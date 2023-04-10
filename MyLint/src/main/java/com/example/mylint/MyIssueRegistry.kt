@@ -11,5 +11,6 @@ class MyIssueRegistry : IssueRegistry() {
 
     override val issues: List<Issue> = listOf(
         ImageSrcDetector.ISSUE,
+        InstanceCheckClassDetector.ISSUE,
     )
 }

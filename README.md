@@ -2,19 +2,13 @@
 
 여러 custom lint 테스트를 위한 프로젝트입니다.
 
+## InstanceCheckClassDetector
+
+Activity에서 특정 클래스를 프로퍼티로 갖고 있는 경우 경고
 
 ## ImageSrcDetector
 
-layout xml에서 android:src attribute를 사용하는 경우, app:srcCompat을 사용하도록 경고 
-
-## ImageSrcDetector
-layout xml에서 bitmap을 참조하는 경우, vector 이미지를 참조하도록 경고
-
-
-
-TBD
-PSI and UAST 사용
-
+layout xml에서 android:src attribute를 사용하는 경우, app:srcCompat을 사용하도록 경고
 
 참고
 [http://googlesamples.github.io/android-custom-lint-rules/api-guide/basics.md.html](http://googlesamples.github.io/android-custom-lint-rules/api-guide/basics.md.html)
